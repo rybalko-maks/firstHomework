@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>It-incubator precourse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <span>IT-INCUBATOR</span>
+<body data-cy="hw2-body">
+    <header data-cy="hw2-header">
+        <span data-cy="hw2-header-span">IT-INCUBATOR</span>
     </header>
 
-    <section data-cy="hw1-section-main-pre">
-    <h1>Рыбалко Максим Анатольевич</h1>
-    <p>Работаю производителем работ в электромонтаже. В связи со спецификой профессии, объездил пол России (и не только) и работал на на многих крупных строительных проектах (БелАЭС,УКПГ-2 и т.д.) Люблю книги и сериалы</p>
-    <img src="https://i.pinimg.com/564x/ee/32/7b/ee327bc500b5381b87f5632a37690e42.jpg" alt="Цитата">
+    <section class="main-section" data-cy="hw2-section-main-pre">
+        <h1 class="main-title" data-cy="hw2-main-title">Рыбалко Максим Анатольевич</h1>
+        <p class="main-text" data-cy="hw2-text">Работаю производителем работ в электромонтаже. В связи со спецификой профессии, объездил пол России (и не только) и работал на на многих крупных строительных проектах (БелАЭС,УКПГ-2 и т.д.) Люблю книги и сериалы</p>
+        <img class="main-image" data-cy="hw2-main-image" src="https://i.pinimg.com/564x/ee/32/7b/ee327bc500b5381b87f5632a37690e42.jpg" alt="Цитата">
     </section>
 
-    <section data-cy="hw1-section-about-pre">
-        <select name="city">
+    <section class="about-section" data-cy="hw2-section-about-pre">
+        <select data-cy="hw2-select-pre" name="city">
             <option value="Toronto">Торонто</option>
             <option value="Mostovskoy" selected>Мостовской</option>
             <option value="Tokyo">Токио</option>
             <option value="Saint-Petersburg">Санкт-Петербург</option>
         </select>
-        <div data-cy="hw1-unordered-list-box-pre">
-            <h2>Топ 5 сериалов</h2>
-            <ul>
+
+        <div>
+            <h2 class="section-title" data-cy="hw2-section-title-pre">Топ 5 сериалов</h2>
+            <ul class="frameworks-list" data-cy="hw2-frameworks-list-pre">
                 <li>Декстер</li>
                 <li>Во все тяжкие</li>
                 <li>Теория большого взрыва</li>
@@ -33,9 +40,9 @@
                 <li>Остаться в живых</li>
             </ul>
         </div>
-        <div data-cy="hw1-ordered-list-box-pre">
-            <h2>Топ 5 книг</h2>
-            <ol>
+        <div>
+            <h2 class="section-title" data-cy="hw2-section-title-pre">Топ 5 книг</h2>
+            <ol class="books-list" data-cy="hw2-books-list-pre">
                 <li>Серия романов "Песнь льда и пламени"</li>
                 <li>Серия романов "Тёмная башня"</li>
                 <li>Серия романов "Ведьмак"</li>
@@ -43,65 +50,68 @@
                 <li>Первому игроку пригтовиться</li>
             </ol>
         </div>
-        <div data-cy="hw1-skills-box-pre">
-            <h2>Мои скиллы</h2>
-            <fieldset>
-                <label>
+        <div>
+            <h2 class="section-title" data-cy="hw2-section-title-pre">Мои скиллы</h2>
+                            <label class="label" data-cy="hw2-label-pre" for="1">
                     <input type="checkbox" name="technology" value="html" checked>
-                    html
+                    HTML5
                 </label>
-                <label>
+
+                <label class="label" data-cy="hw2-label-pre" for="2">
                     <input type="checkbox" name="technology" value="CSS3">
                     CSS3
                 </label>
-                <label>
+
+                <label class="label" data-cy="hw2-label-pre" for="3">
                     <input type="checkbox" name="technology" value="JavaScript">
                     JavaScript
                 </label>
-                <label>
+
+                <label class="label" data-cy="hw2-label-pre" for="4">
                     <input type="checkbox" name="technology" value="Jquery">
                     Jquery
                 </label>
-                <label>
+
+                <label class="label" data-cy="hw2-label-pre" for="5">
                     <input type="checkbox" name="technology" value="React">
                     React
                 </label>
-            </fieldset>
         </div>
-        <div>
-                    <input type="text" name="New Skill" placeholder="Новый скилл">
-        <button type="submit">Добавить</button>
-        <hr>
-        </div>     
-                <table border="1" data-cy="hw-about-table-pre">
-                    <tr>
-                        <th>п/п</th>
-                        <th>Наименование</th>
-                        <th>Количество</th>
-                    </tr>
-                    <tr>
-                        <th>1</th>
-                        <td>Песнь льда и пламени</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <td>Ведьмак</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <th>3</th>
-                        <td>Тёмная башня</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" colspan="2">Итого</td>
-                        <td>18</td>
-                    </tr>
+
+        <input class="text-field" data-cy="hw2-text-field-pre" type="text" placeholder="Новый скилл">
+        <button class="btn" data-cy="hw2-btn-pre">Добавить</button>
+        <hr class="line" data-cy="hw2-line-pre">
+        
+        <table data-cy="hw2-about-table-pre" border="1">
+            <tr>
+                <th>п/п</th>
+                <th>Наименование</th>
+                <th>Количество</th>
+                </tr>
+            <tr>
+                <th>1</th>
+                <td>Песнь льда и пламени</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Ведьмак</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Тёмная башня</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td colspan="2">Итого:</td>
+                <td>18</td>
+            </tr>
         </table>
     </section>
+
     <footer data-cy="hw-footer-pre">
-    <a href="https://it-incubator.io/">it-incubator</a>
+        <a class="footer-link" data-cy="hw-footer-link-pre" href="https://it-incubator.io/">it-incubator</a>
     </footer>
 </body>
 </html>
